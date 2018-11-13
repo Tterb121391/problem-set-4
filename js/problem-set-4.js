@@ -4,7 +4,8 @@
 
 function hello() {
 
-  // WRITE YOUR EXERCISE 1 CODE HERE
+var div=document.getElementById("output1");
+div.innerHTML="Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -16,7 +17,6 @@ function hello() {
  */
 
 function helloAgain() {
-
   //////////// DO NOT MODIFY
   let name; // DO NOT MODIFY
   //////////// DO NOT MODIFY
@@ -24,7 +24,9 @@ function helloAgain() {
   // Use the name variable declared above to store the user's response. You
   // do not need to re-declare it, only assign it a value.
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
+  var div=document.getElementById("output2");
+  name=prompt("What is your name?");
+  div.innerHTML="Hello, " + name + "!";
 
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -44,7 +46,9 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+  let answer1= cels * 1.8 + 32;
+  var div=document.getElementById("output3");
+  div.innerHTML=cels + " degrees Celsius equals " + answer1.toFixed(2) + " degrees Fahrenheit.";
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -64,7 +68,9 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+  let answer2= (fahr - 32) / 1.8;
+  var div=document.getElementById("output4");
+  div.innerHTML=fahr + " degrees Fahrenheit equals " + answer2.toFixed(2) + " degrees Celsius.";
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -88,7 +94,15 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 5 CODE HERE
+  let answer3 = input / 63360
+  let whole3 = Math.floor(answer3);
+  let answer4 = ((answer3 - whole3) * 63360) / 36;
+  let whole4 = Math.floor(answer4);
+  let answer5 = ((answer4 - whole4) * 36) / 12;
+  let whole5 = Math.floor(answer5);
+  let answer6 = ((answer5 - whole5) * 12);
+  var div=document.getElementById("output5");
+  div.innerHTML="Miles: " + whole3 + "<br>" + whole4;
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
