@@ -94,7 +94,7 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  let answer3 = input / 63360
+  let answer3 = input / 63360;
   let whole3 = Math.floor(answer3);
   let answer4 = ((answer3 - whole3) * 63360) / 36;
   let whole4 = Math.floor(answer4);
@@ -102,7 +102,7 @@ function inches() {
   let whole5 = Math.floor(answer5);
   let answer6 = ((answer5 - whole5) * 12);
   var div=document.getElementById("output5");
-  div.innerHTML="Miles: " + whole3 + "<br>" + whole4;
+  div.innerHTML="Miles: " + whole3 + "<br>" + "Yards: " + whole4 + "<br>" + "Feet: " + whole5 + "<br>" + "Inches: " + answer6.toFixed(0);
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
@@ -126,7 +126,13 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
+  let answer7 = input / 100000;
+  let whole7 = Math.floor(answer7);
+  let answer8 = ((answer7 - whole7) * 1000);
+  let whole8 = Math.floor(answer8);
+  let answer9 = ((answer8 - whole8) * 100);
+  var div=document.getElementById("output6");
+  div.innerHTML="Kilometers: " + whole7 + "<br>" + "Meters: " + whole8 + "<br>" + "Centimeters: " + answer9.toFixed(0);
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
@@ -150,7 +156,17 @@ function fluidOunces() {
   let fluidOunces = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 7 CODE HERE
+  let gallons = input / 128;
+  let gallonsWhole = Math.floor(gallons);
+  let quarts = ((gallons - gallonsWhole) * 4);
+  let quartsWhole = Math.floor(quarts);
+  let pints = ((quarts - quartsWhole) * 2);
+  let pintsWhole = Math.floor(pints);
+  let cups = ((pints - pintsWhole) * 2);
+  let cupsWhole = Math.floor(cups);
+  let ounces = ((cups - cupsWhole) * 8);
+  var div=document.getElementById("output7");
+  div.innerHTML="Gallons: " + gallonsWhole + "<br>" + "Quarts: " + quartsWhole + "<br>" + "Pints: " + pintsWhole + "<br>" + "Cups: " + cupsWhole + "<br>" + "Fluid Ounces: " + ounces.toFixed(0);
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
@@ -174,7 +190,13 @@ function ounces() {
   let ounces = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 8 CODE HERE
+  let tons = input / 32000;
+  let tonsWhole = Math.floor(tons);
+  let pounds = ((tons - tonsWhole) * 2000);
+  let poundsWhole = Math.floor(pounds);
+  let ounces2 = ((pounds - poundsWhole) * 16);
+  var div=document.getElementById("output8");
+  div.innerHTML="Tons: " + tonsWhole + "<br>" + "Pounds: " + poundsWhole + "<br>" + "Ounces: " + ounces2;
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
