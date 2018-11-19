@@ -196,7 +196,7 @@ function ounces() {
   let poundsWhole = Math.floor(pounds);
   let ounces2 = ((pounds - poundsWhole) * 16);
   var div=document.getElementById("output8");
-  div.innerHTML="Tons: " + tonsWhole + "<br>" + "Pounds: " + poundsWhole + "<br>" + "Ounces: " + ounces2;
+  div.innerHTML="Tons: " + tonsWhole + "<br>" + "Pounds: " + poundsWhole + "<br>" + "Ounces: " + ounces2.toFixed(0);
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
@@ -220,7 +220,17 @@ function money() {
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 9 CODE HERE
+  let dollars = pennies / 100;
+  let dollarsWhole = Math.floor(dollars);
+  let quarters = ((dollars - dollarsWhole) * 4);
+  let quartersWhole = Math.floor(quarters);
+  let dimes = ((quarters - quartersWhole) * 2.5);
+  let dimesWhole = Math.floor(dimes);
+  let nickels = ((dimes - dimesWhole) * 2);
+  let nickelsWhole = Math.floor(nickels);
+  let penniesWhole = ((nickels - nickelsWhole) * 5);
+  var div = document.getElementById("output9");
+  div.innerHTML = "Dollars: " + dollarsWhole + "<br>" + "Quarters: " + quartersWhole + "<br>" + "Dimes: " + dimesWhole + "<br>" + "Nickels: " + nickelsWhole + "<br>" + "Pennies: " + penniesWhole.toFixed(0);
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -244,8 +254,16 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 10 CODE HERE
-
+  let quarters = amount / 0.25;
+  let quartersWhole = Math.floor(quarters);
+  let dimes = ((quarters - quartersWhole) * 0.25) / 0.1;
+  let dimesWhole = Math.floor(dimes);
+  let nickels = ((dimes - dimesWhole) * 0.1) / 0.05;
+  let nickelsWhole = Math.floor(nickels);
+  let penniesWhole = ((nickels - nickelsWhole) * 5);
+  let coins = quartersWhole + dimesWhole + nickelsWhole + penniesWhole;
+  var div = document.getElementById("output10");
+  div.innerHTML = coins.toFixed(0) + " coins.";
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
