@@ -2,9 +2,9 @@
  * SOLUTION: Hello.
  */
 
-function hello() {
-  let result = "Hello, AP Computer Science Principles!";
-  document.getElementById("output1").innerHTML = result;
+function hello() {                                         //defines function called "hello"
+  let result = "Hello, AP Computer Science Principles!";  //creates variable called "result" and assigns it to the value "Hello, AP Computer Science Principles!"
+  document.getElementById("output1").innerHTML = result;  //fetches HTML element with in ID of "output1" and prints the "result" variable in that element
 
   check("hello");
 }
@@ -13,11 +13,10 @@ function hello() {
  * SOLUTION: Hello, Again.
  */
 
-function helloAgain() {
-  let name = prompt("What is your name?");
-
-  let result = "Hello, " + name + "!";
-  document.getElementById("output2").innerHTML = result;
+function helloAgain() {                                   //defines function called "helloAgain"
+  let name = prompt("What is your name?");                //the user is prompted with the question "What is your name?", and the user input is saved in the created variable "name"
+  let result = "Hello, " + name + "!";                    //creates variable called "result" and assigns it to the value of "Hello, " + name + "!"
+  document.getElementById("output2").innerHTML = result;  //fetches HTML element with ID of "output2" and prints the "result" variable into the element
 
   check("helloAgain", name);
 }
